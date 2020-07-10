@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5"
+  }
+}
