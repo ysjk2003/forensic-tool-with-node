@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import searchIcon from './asset/search.svg'
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className={"title"}>스트리머 팬심 테스트</h1>
+      <h1>스트리머 검색</h1>
+      <div className={"search-area"}>
+        <input type={"text"} placeholder={"스트리머 검색"} className={"search-box"}/>
+        <button className={"search-button"}><img src={searchIcon} alt={"검색"} className={"search-icon"} /></button>
+      </div>
+      <div>
+        <span>문제 추가하기 &nbsp;</span>
+        <span>| &nbsp;</span>
+        <span>틀린문제 수정하기</span>
+      </div>
+      <footer className={"footer"}>
+          <span>Made by&nbsp;</span>
+          <span>김태훈(강도단)&nbsp;</span>
+          <a href={"https://www.twitch.tv/"}>트위치</a>
+      </footer>
     </div>
   );
 }
