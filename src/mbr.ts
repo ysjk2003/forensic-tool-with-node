@@ -1,0 +1,3 @@
+class mbr {
+    private boot
+}
