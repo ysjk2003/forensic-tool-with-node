@@ -1,8 +1,20 @@
 import * as fs from "fs"
+import viewSector from "./hex-viewer"
 
-const FIlE_LOCATION = "../Datas/ex01.vhd"
+const FIlE_LOCATION = "./data/ex01.vhd"
 
-fs.readFile(FIlE_LOCATION, 'utf8', function(err, fileData) {
-    if (err) throw err
-    console.log(fileData)
-})
+function openFile(fileLocation: string) {
+    try {
+        return fs.readFileSync(fileLocation)
+    } catch (err) {
+        console.log("Can not open file:", fileLocation)
+        return Buffer.from("")
+    }
+}
+
+function main() {
+    const file: Buffer = openFile(FIlE_LOCATION)
+    viewSector(file, 0)
+}
+
+main()
